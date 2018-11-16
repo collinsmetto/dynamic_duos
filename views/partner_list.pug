@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  
+  ul
+    each partner in partner_list
+      li
+       = partner.first_name 
+      li
+       = partner.family_name
+        
+    else
+      li There are no partners.

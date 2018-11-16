@@ -8,11 +8,12 @@ var Schema = mongoose.Schema;
 
 var UserSchema = new Schema(
 			      {
-				  first_name: {type: String, required: true, max: 100},
-                  family_name: {type: String, required: true, max: 100},
-                  class: {type: String},
-                  attribute : {type:Schema.Types.ObjectId, ref: 'Attribute'}
-                  partner: [{type: Schema.Types.ObjectId, ref: 'Partner'}]
+				  firstName: {type: String, required: true, max: 100},
+                  familyName: {type: String, required: true, max: 100},
+                  course: {type: String},
+                  email: {type: String},
+                  attribute : {type:Schema.Types.ObjectId, ref: 'Attribute'},
+                  partner: [{type: Schema.Types.ObjectId, ref: 'Partner'}],
 			      }
 			      );
 

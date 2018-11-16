@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  
+  ul
+    each attribute in attribute_list
+      li
+       = attribute.language
+       = attribute.background
+       = attribute.confidence
+   
+      
+        
+    else
+      li There are no attributes.
+
+    div alkdksdla
