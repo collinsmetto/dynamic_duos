@@ -11,7 +11,6 @@ var AttributeSchema = new Schema(
 				  language: {type: Number, required: true},
                   background: {type: Number, required: true},
                   confidence: {type: Number},
-                       
 			      }
 			      );
 

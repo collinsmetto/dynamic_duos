@@ -1,0 +1,119 @@
+Scratch
+layout.pug
+//----------------------------------------------------
+    div(class='container-fluid')
+      div(class='row')
+        div(class='col-sm-2')
+          block sidebar
+            ul(class='sidebar-nav')
+              li 
+                a(href='/duos') Home
+              li 
+                a(href='/duos/attribute_create_get') Attribute
+              li 
+                a(href='/duos/partner_list') Partner
+              
+               
+                
+        div(class='col-sm-10')
+          block content
+//----------------------------------------------------
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    //- script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    //- script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='stylesheets/style.css')
+    //- link(rel='stylesheet', href='/css/flatly/bootstrap.min.css')
+  body
+    div(class='container-fluid')
+      div(class='row')
+        div(class='col-sm-2')
+          block sidebar
+            ul(class='sidebar-nav')
+              li 
+                a(href='/duos') Home
+              li 
+                a(href='/duos/attribute_create_get') Attribute
+              li 
+                a(href='/duos/partner_list') Partner
+              
+               
+                
+        div(class='col-sm-10')
+          block content
+
+
+
+//----------------------------------------------------
+
+
+.container
+  .row
+    .col-md-6.col-md-offset-3
+      .panel.panel-login
+        .panel-heading
+          .row
+            .col-xs-6
+              a#login-form-link.active(href='#') Login
+            .col-xs-6
+              a#register-form-link(href='#') Register
+          hr
+        .panel-body
+          .row
+            .col-lg-12
+              form#login-form(action='user_login', method='post', role='form', style='display: block;')
+                .form-group
+                  input#username.form-control(type='text', name='username', tabindex='1', placeholder='Username', value='')
+                .form-group
+                  input#password.form-control(type='password', name='password', tabindex='2', placeholder='Password')
+                .form-group.text-center
+                  input#remember(type='checkbox', tabindex='3', name='remember')
+                  label(for='remember')  Remember Me
+                .form-group
+                  .row
+                    .col-sm-6.col-sm-offset-3
+                      input#login-submit.form-control.btn.btn-login(type='submit', name='login-submit', tabindex='4', value='Log In')
+                .form-group
+                  .row
+                    .col-lg-12
+                      .text-center
+                        a.forgot-password(href='#', tabindex='5') Forgot Password?
+              
+              
+              
+              
+              
+              
+              form#register-form(action='https://phpoll.com/register/process', method='post', role='form', style='display: none;')
+                .form-group
+                  input#username.form-control(type='text', name='username', tabindex='1', placeholder='Username', value='')
+              //-   .form-group
+              //-     input#email.form-control(type='email', name='email', tabindex='1', placeholder='Email Address', value='')
+              //-   .form-group
+              //-     input#password.form-control(type='password', name='password', tabindex='2', placeholder='Password')
+              //-   .form-group
+              //-     input#confirm-password.form-control(type='password', name='confirm-password', tabindex='2', placeholder='Confirm Password')
+              //-   .form-group
+              //-     .row
+              //-       .col-sm-6.col-sm-offset-3
+              //-         input#register-submit.form-control.btn.btn-register(type='submit', name='register-submit', tabindex='4', value='Register Now')
+              
+              
+              //- form#register-form(action='', method='post', role='form', style='display: none;')
+              //-   .form-group
+              //-     label(for='firstName') First Name:
+              //-     input#background.form-control(type='text', placeholder='First Name' name='firstName' required='true')
+              //-   .form-group
+              //-     .row
+              //-       .col-sm-6.col-sm-offset-3
+              //-         input#register-submit.form-control.btn.btn-register(type='submit', name='register-submit', tabindex='4', value='Register Now')
+               
+                
+           
+
+      

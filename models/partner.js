@@ -6,17 +6,26 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
+
+
+var NewUserSchema = new Schema(
+	{
+		firstName: {type: String, required: true, max: 100},
+		familyName: {type: String, required: true, max: 100},
+		course: {type: String, required :true, max:100},
+		email: {type: String},
+		  }
+		  );	
+
 var PartnerSchema = new Schema(
 			      {
-				  first_name: {type: String, required: true, max: 100},
-                  family_name: {type: String, required: true, max: 100},
+				  
                   course: {type: String, required :true, max:100},
-                  match: {type: Number},
-                  
+				  match: {type: Number},
+				  rank : {type: Number},
+				  user: [{type: NewUserSchema}],   
 			      }
 			      );
-
-// Virtual for partner's full name (?)
 
 //Export model
 module.exports = mongoose.model('Partner', PartnerSchema);

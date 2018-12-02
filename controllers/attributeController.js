@@ -5,10 +5,7 @@ Author: Collins Metto
 
 
 var Attribute = require('../models/attribute');
-var Partner = require('../models/partner');
-
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+// var Partner = require('../models/partner');
 
 // Display attributes page 
 exports.attribute_page = function(req, res) {
@@ -51,13 +48,20 @@ exports.attribute_create_get = function(req, res, next) {
 
 
    // save attribute
-   // Data from form is valid. Save attribute.
+   // Data from form is valid. Save attribute to logged in user in this session. 
    attribute.save(function (err) {
     if (err) { return next(err); }
        //successful - redirect to new book record.
-       // res.render('partner_list', { title: 'Partner List', partner_list: list_partners });
+        // res.render('partner_list', { title: 'Partner List', partner_list: list_partners });
     });
+// render attributes 
 
+// Assign logged in user to attributes 
+
+
+
+
+    //--------------------------------------------------------------------------------------
     // find all partners 
     Partner.find({}) // can specify here what to find
     .exec(function (err, list_partners) {

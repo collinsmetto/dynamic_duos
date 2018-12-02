@@ -3,19 +3,34 @@ extends layout
 block content
 
 
-  h1= title
+    h1= title
+    if error
+      p Error getting dynamic content.
+    else
+      ul
+        p 
+          | Welcome to #[em Dynamic Duos], an initial page modelled for the dynamic duos project.
+          | Dynamic duos is motivated by the need to match students in Princeton COS classes
+          | based on their skill levels for a richer classroom learning experience.
 
-  p Welcome to #[em Dynamic Duos], an initial page modelled for the dynamic duos project.
-  if error
-    p Error getting dynamic content.
-  else
-    p This is the current state of the database of dynamic duos users. 
-    ul
-      p 
-        
-          li #[strong Attribute:] !{data.attribute_count}
-          li #[strong Partner:] !{data.partner_count} 
-          li #[strong User:] !{data.user_count}
+          form(method='POST' action='')
+            div.form-group
+              label(for='email') Email Address:
+              input#background.form-control(type='text', placeholder='Email' name='email' required='true')
+            
+            div.form-group
+              label(for='familyName') Password:
+              input#family_name.form-control(type='text', placeholder='Password' name='password' required='true')
+          
+            button.btn.btn-primary(type='submit') Log in 
+            
+            p
+            
+            | Not a user? 
+  
+            a(href='/duos/user_registration') Sign up here
 
-      a(href='/duos/user_registration') Sign up
-     
+          if errors 
+            ul
+              for error in errors
+                li!= error.msg

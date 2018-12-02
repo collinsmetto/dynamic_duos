@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  body
+    .container
+      h2 Recommended Partners
+      table.table.table-striped
+        thead
+          tr
+            th Firstname
+            th Match (%)
+            th Rank
+        tbody
+            
+            each neighbour in data
+                tr  
+                    td= neighbour.name 
+                    td= neighbour.match
+                    td= neighbour.rank
+                    

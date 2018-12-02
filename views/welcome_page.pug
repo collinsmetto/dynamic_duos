@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+
+  h1= title
+  user
+  p Welcome to #[em Dynamic Duos Home]
+  if error
+    p Error getting dynamic content.
+  else
+    p Partnering status: Active
+    p Classes Enrolled in on Dynamic Duos: COS 333
+    p Find partner for COS 333 Assignment 3, Registrar's Office Application using Database Programming
+    //- button.btn.btn-primary(type='submit') Find Partner
+    a.btn.btn-info(href='attribute_create_get' role='button') Find Partner
+
+    ul
+    
+     
+     

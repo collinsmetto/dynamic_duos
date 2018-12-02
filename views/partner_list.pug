@@ -1,14 +1,75 @@
 extends layout
 
 block content
-  h1= title
-  
-  ul
-    each partner in partner_list
-      li
-       = partner.first_name 
-      li
-       = partner.family_name
-        
-    else
-      li There are no partners.
+  body
+    .container
+      h2 Recommended Partners
+      table.table.table-striped
+        thead
+          tr
+            th Firstname
+            th Lastname
+            th Email
+            th Match (%)
+            th Rank
+        tbody
+          tr
+            td Collins 
+            td Metto
+            td collinsmetto@princeton.edu
+            td 98
+            td 1
+          tr
+            td Mary
+            td Moe
+            td mary@example.com
+            td 95
+            td 2
+          tr
+            td July
+            td August
+            td july@gmail.com
+            td 90
+            td 3
+          tr
+            td Haya
+            td Huyu
+            td huyu@aol.com
+            td 87
+            td 4
+          tr
+            td Ropi
+            td Kiplimo
+            td ckmetto@princeton.edu
+            td 80
+            td 5
+          tr
+            td Kariuki
+            td DG
+            td dg@alliancehighschool.org
+            td 77
+            td 6
+          tr
+            td Mkomboti
+            td Alfred
+            td alfredo@gmail.com
+            td 70
+            td 7
+          tr
+            td Justus
+            td Kilembe
+            td Kilembe@gmail.com
+            td 57
+            td 8
+          tr
+            td Robin
+            td Hood
+            td rhood@hood.com
+            td 50
+            td 9
+          tr
+            td Atant
+            td Whos
+            td whos@gmail.com
+            td 35
+            td 10
